@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.png" />
+</p>
+
 # EZ Fuzzy
 
 A fast and efficient fuzzy file finder application built with Qt.
