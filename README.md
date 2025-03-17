@@ -23,7 +23,7 @@ A fast and efficient fuzzy file finder application built with Qt.
 
 ```bash
 # Clone the repository
-git clone https://github.com/kkomoney/ez-fuzzy.git
+git clone https://github.com/YOUR_GITHUB_USERNAME/ez-fuzzy.git
 cd ez-fuzzy
 
 # Create build directory
