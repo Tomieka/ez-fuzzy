@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=EZ Fuzzy
+GenericName=Fuzzy File Finder
+Comment=Fast fuzzy file finder
+Exec=ez-fuzzy
+Terminal=false
+Categories=Utility;FileTools;Qt;
+Keywords=search;find;files;fuzzy; 

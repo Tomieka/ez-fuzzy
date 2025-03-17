@@ -1,0 +1,75 @@
+# Build directories
+build/
+debug/
+release/
+bin/
+lib/
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# Qt generated files
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+*.qrc.depends
+*.moc
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# IDE files
+.vscode/
+.idea/
+*.user
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.cbp
+*.creator.user
+*.creator.user.*
+*.autosave
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# AUR packaging
+*.pkg.tar.zst
+*.tar.gz
+PKGBUILD
+.SRCINFO 
