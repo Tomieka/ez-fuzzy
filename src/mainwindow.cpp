@@ -20,6 +20,7 @@
 #include <QTextStream>
 #include <QMimeDatabase>
 #include <QRegularExpression>
+#include "syntaxhighlighter.h"
 
 static std::atomic<int> g_filesScanned(0);
 
@@ -166,6 +167,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->nextButton->setEnabled(false);
     
     ui->searchEdit->setFocus();
+
+    m_highlighter = new SyntaxHighlighter(ui->previewTextEdit->document());
 }
 
 MainWindow::~MainWindow()
@@ -909,7 +912,7 @@ void MainWindow::previewSelectedFile()
     
     if (isFileTypeText(filePath)) {
         QString previewContent = getFilePreview(filePath);
-        ui->previewTextEdit->setText(previewContent);
+        ui->previewTextEdit->setPlainText(previewContent);
     } else {
         QFileInfo fileInfo(filePath);
         ui->previewTextEdit->clear();
@@ -1056,7 +1059,10 @@ QString MainWindow::getFilePreview(const QString &filePath, int maxLines) const
     file.close();
     
     if (truncated) {
-        content.append(QString("\n[Preview truncated, showing first %1 lines]").arg(maxLines));
+        if (content.endsWith('\n')) {
+            content.chop(1);
+        }
+        content.append(QString("\n\n[Preview truncated, showing first %1 lines]").arg(maxLines));
     }
     
     return content;

@@ -27,6 +27,7 @@
 #include <QProcess>
 #include <QCheckBox>
 #include "fuzzymatcher.h"
+#include "syntaxhighlighter.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -148,6 +149,8 @@ private:
     QCheckBox *m_showDirsCheckbox;
     bool m_showFiles;
     bool m_showDirectories;
+    
+    SyntaxHighlighter *m_highlighter;
     
     void updateResults(const QStringList &results);
     void updatePaginationControls();

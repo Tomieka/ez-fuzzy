@@ -20,12 +20,14 @@ set(SOURCES
     src/main.cpp
     src/mainwindow.cpp
     src/fuzzymatcher.cpp
+    src/syntaxhighlighter.cpp
 )
 
 # Define header files
 set(HEADERS
     src/mainwindow.h
     src/fuzzymatcher.h
+    src/syntaxhighlighter.h
 )
 
 # Define UI files
